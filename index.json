@@ -246,6 +246,7 @@
                 ]
             }
         ],
+        "react-hooks/exhaustive-deps": "off",
         "react/jsx-curly-brace-presence": [
             "error",
             {
