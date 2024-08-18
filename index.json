@@ -13,7 +13,8 @@
         }
     },
     "parserOptions": {
-        "sourceType": "module"
+        "sourceType": "module",
+        "project": true
     },
     "plugins": [
         "@typescript-eslint",
@@ -26,17 +27,8 @@
         "@typescript-eslint/naming-convention": [
             "warn",
             {
-                "selector": "default",
-                "format": ["camelCase"],
-                "leadingUnderscore": "allow"
-            },
-            {
                 "selector": "variable",
-                "format": ["PascalCase", "camelCase", "SCREAMING_SNAKE_CASE"]
-            },
-            {
-                "selector": "parameter",
-                "format": ["camelCase"]
+                "format": ["PascalCase", "camelCase"]
             },
             {
                 "selector": "typeLike",
@@ -101,8 +93,13 @@
                 }
             }
         ],
+        "no-unused-vars": "off",
         "@typescript-eslint/no-unused-vars": [
-            "error"
+            "error",
+            {
+                "argsIgnorePattern": "^_",
+                "caughtErrorsIgnorePattern": "^_"
+            }
         ],
         "camelcase": [
             "error",
@@ -227,7 +224,6 @@
         "no-multiple-empty-lines": "error",
         "space-before-blocks": "error",
         "comma-spacing": "error",
-        "no-unused-vars": "off",
         "jsx-quotes": [
             "error",
             "prefer-single"
@@ -258,7 +254,6 @@
             }
         ],
         "react/no-typos": "error",
-        "react/no-danger": "error",
         "react/react-in-jsx-scope": "off",
         "react/jsx-sort-props": "warn",
         "react/self-closing-comp": "error",
