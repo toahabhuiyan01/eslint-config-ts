@@ -24,17 +24,6 @@
     ],
     "ignorePatterns": [],
     "rules": {
-        "@typescript-eslint/naming-convention": [
-            "warn",
-            {
-                "selector": "variable",
-                "format": ["PascalCase", "camelCase"]
-            },
-            {
-                "selector": "typeLike",
-                "format": ["PascalCase"]
-            }
-        ],
         "unicorn/no-array-for-each": ["error"],
         "unicorn/consistent-function-scoping": [
             "error",
@@ -46,7 +35,6 @@
         "unicorn/no-object-as-default-parameter": "error",
         "unicorn/prefer-array-find": "error",
         "unicorn/prefer-array-some": "error",
-
         "max-depth": ["error", 4],
         "@typescript-eslint/no-misused-promises": [
             "error",
@@ -110,13 +98,6 @@
         ],
         "no-unneeded-ternary": [
             "error"
-        ],
-        "no-restricted-syntax": [
-            "error",
-            {
-                "selector": "TSEnumDeclaration",
-                "message": "Don't declare enums, use literals instead"
-            }
         ],
         "no-constant-condition": [
             "error"
