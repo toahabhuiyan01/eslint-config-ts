@@ -17,6 +17,7 @@
     },
     "plugins": [
         "@typescript-eslint",
+        "@stylistic",
         "react",
         "simple-import-sort",
         "eslint-plugin-unicorn"
@@ -64,10 +65,15 @@
                 "ignoreRestArgs": true
             }
         ],
-        "@typescript-eslint/type-annotation-spacing": [
-            "error"
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            {
+                "argsIgnorePattern": "^_",
+                "caughtErrorsIgnorePattern": "^_"
+            }
         ],
-        "@typescript-eslint/member-delimiter-style": [
+        "@stylistic/member-delimiter-style": [
             "error",
             {
                 "multiline": {
@@ -80,13 +86,8 @@
                 }
             }
         ],
-        "no-unused-vars": "off",
-        "@typescript-eslint/no-unused-vars": [
-            "error",
-            {
-                "argsIgnorePattern": "^_",
-                "caughtErrorsIgnorePattern": "^_"
-            }
+        "@stylistic/type-annotation-spacing": [
+            "error"
         ],
         "camelcase": [
             "error",
