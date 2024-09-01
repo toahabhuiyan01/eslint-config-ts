@@ -179,6 +179,11 @@
                 "blankLine": "always",
                 "prev": "import",
                 "next": "block-like"
+            },
+            {
+                "blankLine": "always",
+                "prev": "*",
+                "next": "return"
             }
         ],
         "eqeqeq": "error",
